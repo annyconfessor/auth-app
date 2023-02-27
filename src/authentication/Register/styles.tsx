@@ -6,8 +6,8 @@ ${({ theme }) => css`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  width: 350px;
-  height: 500px;
+  width: 21.875rem;
+  /* height: 31.25rem; */
   background-color: ${theme.colors.white};
 `}
 `
@@ -24,8 +24,21 @@ export const Paragraph = styled.h2`
   color: #333333;
 `
 
+export const Wrapper = styled.div`
+  height: 7.5rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+`
+
 export const Subtitle = styled.h3`
   font-size: 14px;
   font-weight: 400;
   color: #828282;
+`
+
+export const Span = styled.span`
+  color: #2D9CDB;
+  margin-left: 3px;
 `
