@@ -1,5 +1,13 @@
-import styled from 'styled-components'
+import React, { ReactElement } from "react"
+import { ThemeProvider as StyledProvider } from "styled-components"
+import Theme from "./theme"
 
-export const Container = styled.div`
-  background-color: red;
-`
+type ThemeProps = {
+  children: ReactElement
+}
+
+const ThemeProvider = ({ children }: ThemeProps) => (
+    <StyledProvider theme={Theme}>{children}</StyledProvider>
+  )
+
+export default ThemeProvider
