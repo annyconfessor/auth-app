@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Image } from '../../components'
 import Button from "../../components/Button";
+import Icon from "../../components/Icon";
+import { IconsEnum } from "../../components/Icon/enum";
 import { ImagesEnum } from '../../components/Image/enum'
 import TextInput from '../../components/Input'
 
-import { Container, Div, Group, Headding, Paragraph, InputsGroup, Subtitle, Span } from "./styles"
+import { Container, Div, Group, Headding, Paragraph, InputsGroup, Subtitle, IconGroup, Span } from "./styles"
 
 const Register = () => {
   const [value, setValue] = useState<string>("")
@@ -37,7 +39,12 @@ const Register = () => {
             <Button onClick={handleOnClick}>Start coding now</Button>
           </InputsGroup>
           <Subtitle>or continue with these social profile</Subtitle>
-          <div>componente de icons</div>
+          <IconGroup>
+            <Icon name="Google"/>
+            <Icon name="Facebook"/>
+            <Icon name="Twitter"/>
+            <Icon name="Github"/>
+          </IconGroup>
           <Subtitle>Adready a member?<Span>Login</Span></Subtitle>
         </Group>
       </Container>

@@ -19,7 +19,7 @@ export const Div = styled.div`
   display: flex;
   justify-content: start;
   margin-top: 25px;
-  width: 17.2rem
+  width: 17.2rem;
 `
 
 export const Group = styled.div`
@@ -57,6 +57,12 @@ export const Subtitle = styled.h3`
   font-size: 14px;
   font-weight: 400;
   color: #828282;
+`
+
+export const IconGroup = styled.div`
+  display: flex;
+  justify-content: space-around;
+  width: 13.75rem;
 `
 
 export const Span = styled.span`
