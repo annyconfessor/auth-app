@@ -5,11 +5,32 @@ ${({ theme }) => css`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   width: 21.875rem;
-  /* height: 31.25rem; */
-  background-color: ${theme.colors.white};
+  border: 1px solid #BDBDBD;
+  border-radius: 24px;
+  height: 31.25rem;
+  /* background-color: ${theme.colors.white}; */
+  background-color: white;
 `}
+`
+
+export const Div = styled.div`
+  display: flex;
+  justify-content: start;
+  margin-top: 25px;
+  width: 17.2rem
+`
+
+export const Group = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 17.2rem;
+  /* border: 1px solid #BDBDBD; */
+  border-radius: 24px;
+  height: 27rem;
 `
 
 export const Headding = styled.h1`
@@ -24,7 +45,7 @@ export const Paragraph = styled.h2`
   color: #333333;
 `
 
-export const Wrapper = styled.div`
+export const InputsGroup = styled.div`
   height: 7.5rem;
   display: flex;
   justify-content: space-between;
