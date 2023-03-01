@@ -4,7 +4,7 @@ import { StyledInput } from './styles';
 type InputProps = {
   type: string;
   name: string;
-  value: string;
+  value?: string;
   placeholder: string;
 }
 
