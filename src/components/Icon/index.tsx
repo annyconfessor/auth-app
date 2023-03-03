@@ -15,5 +15,5 @@ const Icon = ({ name, width, height }: IconProps) => {
     </Figure>
   )
 }
-
+     
 export default Icon

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import icons from "../../assets/Icons";
 import { Image } from '../../components'
 import Button from "../../components/Button";
 import Icon from "../../components/Icon";
@@ -31,21 +32,26 @@ const Register = () => {
           <Image name={ImagesEnum.logo} />
         </Div>
         <Group>
-          <Headding>Join thousands of learners from around the world</Headding>
-          <Paragraph>Master web development by making real-life projects. There are multiple paths for you to choose</Paragraph>
-          <InputsGroup className="inputs-group">
-            <TextInput name="EmailInput" type="email" value={value} placeholder="Email"/>
-            <TextInput name="PasswordInput" type="password" value={value} placeholder="Password"/>
-            <Button onClick={handleOnClick}>Start coding now</Button>
-          </InputsGroup>
-          <Subtitle>or continue with these social profile</Subtitle>
-          <IconGroup>
-            <Icon name="Google"/>
-            <Icon name="Facebook"/>
-            <Icon name="Twitter"/>
-            <Icon name="Github"/>
-          </IconGroup>
-          <Subtitle>Adready a member?<Span>Login</Span></Subtitle>
+          <>
+            <Headding>Join thousands of learners from around the world</Headding>
+            <Paragraph>Master web development by making real-life projects. There are multiple paths for you to choose</Paragraph>
+            <InputsGroup className="inputs-group">
+              <TextInput name="EmailInput" type="email" value={value} placeholder="Email"/>
+              <TextInput name="PasswordInput" type="password" value={value} placeholder="Password"/>
+              <Button onClick={handleOnClick}>Start coding now</Button>
+            </InputsGroup>
+            <Subtitle>or continue with these social profile</Subtitle>
+            <IconGroup>
+              <>
+              {Object.keys(icons).map((item) => <Icon name={`${item}`} />)}
+              {/* <Icon name="Google"/>
+              <Icon name="Facebook"/>
+              <Icon name="Twitter"/>
+              <Icon name="Github"/> */}
+              </>
+            </IconGroup>
+            <Subtitle>Adready a member?<Span>Login</Span></Subtitle>
+          </>
         </Group>
       </Container>
     </div>
