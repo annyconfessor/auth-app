@@ -10,7 +10,6 @@ ${({ theme }) => css`
   border: 1px solid #BDBDBD;
   border-radius: 24px;
   height: 31.25rem;
-  /* background-color: ${theme.colors.white}; */
   background-color: white;
 `}
 `
@@ -28,12 +27,12 @@ export const Group = styled.div`
   align-items: center;
   justify-content: space-evenly;
   width: 17.2rem;
-  /* border: 1px solid #BDBDBD; */
   border-radius: 24px;
   height: 27rem;
 `
 
 export const Headding = styled.h1`
+  font-family: 'Poppins'
   font-size: 18px;
   font-weight: 600;
   color: #333333;

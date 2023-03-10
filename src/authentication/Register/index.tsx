@@ -3,7 +3,7 @@ import icons from "../../assets/Icons";
 import { Image } from '../../components'
 import Button from "../../components/Button";
 import Icon from "../../components/Icon";
-import { IconsEnum } from "../../components/Icon/enum";
+// import { IconsEnum } from "../../components/Icon/enum";
 import { ImagesEnum } from '../../components/Image/enum'
 import TextInput from '../../components/Input'
 
@@ -24,7 +24,7 @@ const Register = () => {
   const handleOnClick = () => {
     console.log("clicou")
   }
-
+ 
   return(
     <div>
       <Container>

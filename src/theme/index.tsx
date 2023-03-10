@@ -1,13 +1,15 @@
-import React, { ReactElement } from "react"
+import { ReactElement } from "react"
 import { ThemeProvider as StyledProvider } from "styled-components"
-import Theme from "./theme"
 
 type ThemeProps = {
-  children: ReactElement
+  children: ReactElement,
+  theme: {}
 }
 
-const ThemeProvider = ({ children }: ThemeProps) => (
-    <StyledProvider theme={Theme}>{children}</StyledProvider>
+const ThemeProvider = ({ children, theme }: ThemeProps) => {
+  return(
+      <StyledProvider theme={theme}>{children}</StyledProvider>
   )
+}
 
 export default ThemeProvider

@@ -4,8 +4,11 @@ import './reset.css'
 import reportWebVitals from './reportWebVitals'
 import styled from 'styled-components'
 
-import SignIn from './authentication/Register'
 import ThemeProvider from './theme'
+import './index.css'
+import './assets/fonts/Poppins/Poppins-Black.ttf'
+import { App } from './App'
+import Theme from './theme/theme'
 
 const Container = styled.div`
   display: flex;
@@ -19,11 +22,11 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <ThemeProvider>
-      <Container>
-        <SignIn />
-      </Container>
-    </ThemeProvider>
+      <ThemeProvider theme={Theme}>
+        <Container>
+          <App />
+        </Container>
+      </ThemeProvider>
   </React.StrictMode>
 );
 
