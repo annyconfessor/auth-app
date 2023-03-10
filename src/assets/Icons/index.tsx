@@ -4,10 +4,22 @@ import Google from './Google.svg'
 import Twitter from './Twitter.svg'
 
 const icons = {
-  Facebook,
-  Github,
-  Google,
-  Twitter
+  facebook: {
+    name: Facebook,
+    href: "https://www.facebook.com"
+  },
+  github: {
+    name: Github,
+    href: "https://github.com/"
+  },
+  google: {
+    name: Google,
+    href: "https://www.google.com"
+  },
+  twitter: {
+    name: Twitter,
+    href: "https://www.twitter.com"
+  }
 }
 
 export default icons

@@ -3,16 +3,19 @@ import { IconsEnum } from "./enum";
 import { Figure, Img } from "./styles"
 
 type IconProps = {
+  href: string,
   name: keyof typeof IconsEnum,
   width?: number,
   height?: number
 }
 
-const Icon = ({ name, width, height }: IconProps) => {
+const Icon = ({ href, name, width, height }: IconProps) => {
   return(
-    <Figure width={width} height={height}>
-      <Img src={icons[name]} />
-    </Figure>
+    <a href={icons[name].href}>
+      <Figure width={width} height={height}>
+        <Img src={icons[name].name} />
+      </Figure>
+    </a>
   )
 }
      

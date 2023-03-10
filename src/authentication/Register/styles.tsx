@@ -65,6 +65,10 @@ export const IconGroup = styled.div`
 `
 
 export const Span = styled.span`
-  color: #2D9CDB;
   margin-left: 3px;
+`
+
+export const Link = styled.a`
+  color: #2D9CDB;
+  text-decoration: none;
 `
