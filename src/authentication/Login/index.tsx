@@ -10,7 +10,8 @@ import TextInput from '../../components/Input'
 import { Container, Div, Box, Group, Headding, InputsGroup, Subtitle, IconGroup, Span, Link } from "./styles"
 
 type LoginTypes = {
-  value: string;
+  email: string;
+  password: string;
 }
 
 const Login = () => {
