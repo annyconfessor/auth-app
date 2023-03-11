@@ -6,13 +6,13 @@ type InputProps = {
   name: string;
   value?: string;
   placeholder: string;
-  role?: string;
+  onChange: (e: any) => void
 }
 
-const TextInput = ({ type, name, placeholder, role }: InputProps) => {
+const TextInput = ({ type, name, value, placeholder, onChange }: InputProps) => {
 
   return(
-    <StyledInput type={type} name={name} placeholder={placeholder} role={role}/>
+    <StyledInput type={type} name={name} placeholder={placeholder} value={value} onChange={onChange}/>
   )
 };
 

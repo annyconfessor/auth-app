@@ -11,7 +11,7 @@ const props = {
 describe('Input Component', () => {
   it('should render Input correctly', () => {
     render(
-      <Input name="EmailInput" type="email" placeholder="Email"/>
+      <Input name="EmailInput" type="email" placeholder="Email" onChange={() => {}}/>
     )
 
 		const input = screen.getByRole('textbox')
@@ -23,7 +23,7 @@ describe('Input Component', () => {
 
   it('should Input onChange works correctly when changed the value', () => {
     render(
-      <Input name="PasswordInput" type="password" placeholder="Password" role="textbox-password" value="123456" />
+      <Input name="PasswordInput" type="password" placeholder="Password" value="123456" onChange={() => {}}/>
     )
 
 		const input = screen.getByRole("textbox-password")
@@ -32,7 +32,7 @@ describe('Input Component', () => {
 		fireEvent.change(input, { target: { value: 'new value 2' }})
 
     const mockInput = jest.mock('./index.tsx', () => ({
-      default: () => <Input name="PasswordInput" type="password" placeholder="Password" role="textbox-password" value="123456" />
+      default: () => <Input name="PasswordInput" type="password" placeholder="Password" value="123456" onChange={() => {}}/>
     }))
 
 

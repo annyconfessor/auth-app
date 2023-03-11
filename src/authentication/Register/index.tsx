@@ -35,8 +35,8 @@ const Register = () => {
             <Headding>Join thousands of learners from around the world</Headding>
             <Paragraph>Master web development by making real-life projects. There are multiple paths for you to choose</Paragraph>
             <InputsGroup className="inputs-group">
-              <TextInput name="EmailInput" type="email" value={value} placeholder="Email"/>
-              <TextInput name="PasswordInput" type="password" value={value} placeholder="Password"/>
+              <TextInput name="EmailInput" type="email" value={value} placeholder="Email" onChange={() => {}}/>
+              <TextInput name="PasswordInput" type="password" value={value} placeholder="Password" onChange={() => {}}/>
               <Button onClick={handleOnClick}>Start coding now</Button>
             </InputsGroup>
             <Subtitle>or continue with these social profile</Subtitle>

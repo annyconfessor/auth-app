@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 import icons from "../../assets/Icons";
 import { Image } from '../../components'
@@ -9,20 +9,20 @@ import TextInput from '../../components/Input'
 
 import { Container, Div, Box, Group, Headding, InputsGroup, Subtitle, IconGroup, Span, Link } from "./styles"
 
+type LoginTypes = {
+  value: string;
+}
+
 const Login = () => {
-  const [value, setValue] = useState<string>("")
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
 
-  useEffect(() => {
-    const handleValue = () => {
-      setValue(value)
-      console.log("value", value)
-    }
-
-    handleValue()
-  }, [value])
-
-  const handleOnClick = () => {
-    console.log("clicou")
+  const handleEmail = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setEmail(e.target.value)
+  }
+  
+  const handlePassword = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setPassword(e.target.value)
   }
 
   return(
@@ -34,10 +34,10 @@ const Login = () => {
         <Box>
           <Headding>Login</Headding>
         </Box>
-        <InputsGroup className="inputs-group">
-          <TextInput name="EmailInput" type="email" value={value} placeholder="Email"/>
-          <TextInput name="PasswordInput" type="password" value={value} placeholder="Password"/>
-          <Button onClick={handleOnClick}>Login</Button>
+        <InputsGroup className="inputs-group"> 
+          <TextInput name="EmailInput" type="email" value={email} placeholder="Email" onChange={handleEmail}/>
+          <TextInput name="PasswordInput" type="password" value={password} placeholder="Password" onChange={handlePassword}/>
+          <Button onClick={() => {}}>Login</Button>
         </InputsGroup>
         <Subtitle>or continue with these social profile</Subtitle>
         <IconGroup>
