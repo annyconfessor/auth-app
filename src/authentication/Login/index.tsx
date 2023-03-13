@@ -9,11 +9,6 @@ import TextInput from '../../components/Input'
 
 import { Container, Div, Box, Group, Headding, InputsGroup, Subtitle, IconGroup, Span, Link } from "./styles"
 
-type LoginTypes = {
-  email: string;
-  password: string;
-}
-
 const Login = () => {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
@@ -43,7 +38,7 @@ const Login = () => {
         <Subtitle>or continue with these social profile</Subtitle>
         <IconGroup>
           <>
-          {Object.keys(icons).map((item) => <Icon name={`${item}`} href={`${item}`}/>)}
+          {Object.keys(icons).map((item) => <Icon name={item} href={item}/>)}
           </>
         </IconGroup>
         <Subtitle>Don’t have an account yet?<Span><Link href="register-page">Register</Link></Span></Subtitle>

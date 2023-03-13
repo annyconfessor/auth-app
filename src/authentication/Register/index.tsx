@@ -42,11 +42,7 @@ const Register = () => {
             <Subtitle>or continue with these social profile</Subtitle>
             <IconGroup>
               <>
-              {Object.keys(icons).map((item) => <Icon name={`${item}`} href={`${item}`}/>)}
-              {/* <Icon name="Google"/>
-              <Icon name="Facebook"/>
-              <Icon name="Twitter"/>
-              <Icon name="Github"/> */}
+              {Object.keys(icons).map((item) => <Icon name={item} href={item}/>)}
               </>
             </IconGroup>
             <Subtitle>Adready a member?<Span><Link href="login-page">Login</Link></Span></Subtitle>

@@ -1,15 +1,14 @@
 import icons from "../../assets/Icons";
-import { IconsEnum } from "./enum";
 import { Figure, Img } from "./styles"
 
 type IconProps = {
-  href: string,
-  name: keyof typeof IconsEnum,
+  href?: string,
+  name: keyof typeof icons,
   width?: number,
   height?: number
 }
 
-const Icon = ({ href, name, width, height }: IconProps) => {
+const Icon = ({ name, width, height }: IconProps) => {
   return(
     <a href={icons[name].href}>
       <Figure width={width} height={height}>
