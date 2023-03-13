@@ -7,8 +7,11 @@ ${({ width, height }) => css`
 `}
 `
 
-export const Img = styled.img`
+export const Img = styled.img<{ borderRadius?: number }>`
   width: 100%;
   height: 100%;
   object-fit: cover;
+  ${({ borderRadius }) => css`
+    border-radius: ${borderRadius ? `${borderRadius}px` : `${0}px`};
+  `}
 `

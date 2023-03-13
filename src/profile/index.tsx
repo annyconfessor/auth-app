@@ -1,16 +1,17 @@
-import React from 'react'
-import { Image } from '../../components'
-import { Header } from '../../components/Header'
-import { ImagesEnum } from '../../components/Image/enum'
+import { Image } from '../components'
+import { Header } from '../components/Header'
+import { ImagesEnum } from '../components/Image/enum'
+import MenuBar from './components/MenuBar'
 import { Body, Container, ButtonContainer, InfosContainer } from './styles'
 
 const Profile = () => {
+
   return(
     <Container>
       <Header>
         <>
-          <Image name={ImagesEnum.logo}/>
-          <div>menu aqui</div>
+          <Image name={ImagesEnum.logo} width={170} height={25} />
+          <MenuBar />
         </>
       </Header>
       <Body>

@@ -6,12 +6,13 @@ type ImageProps = {
   name: ImagesEnum;
   width?: number;
   height?: number;
+  borderRadius?: number;
 }
 
-const Image = ({ name, width, height }: ImageProps) => {
+const Image = ({ name, width, height, borderRadius}: ImageProps) => {
   return(
     <Figure width={width} height={height}>
-      <Img src={images[name]} />
+      <Img src={images[name]} borderRadius={borderRadius}/>
     </Figure>
   )
 }

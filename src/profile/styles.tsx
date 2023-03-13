@@ -33,5 +33,5 @@ export const InfosContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #2ff2c580;
+  background-color: #802ff280;
 `

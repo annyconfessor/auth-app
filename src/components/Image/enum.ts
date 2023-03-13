@@ -1,3 +1,4 @@
 export enum ImagesEnum {
-  logo = 'logo'
+  logo = 'logo',
+  profile = 'profile'
 }

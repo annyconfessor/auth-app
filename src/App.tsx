@@ -1,6 +1,4 @@
-import Login from "./authentication/Login"
-import Profile from "./authentication/profile"
-import Register from "./authentication/Register"
+import Profile from "./profile"
 import { GlobalStyles } from "./GlobalStyles"
 
 export const App = () => {
