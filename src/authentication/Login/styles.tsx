@@ -37,7 +37,7 @@ export const Group = styled.div`
   height: 27rem;
 `
 
-export const Headding = styled.h1`
+export const Heading = styled.h1`
   font-family: 'Poppins'
   font-size: 18px;
   font-weight: 600;

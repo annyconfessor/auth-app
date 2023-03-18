@@ -4,11 +4,12 @@ import { StyledButton } from "./styled"
 type ButtonProps = {
   children: string;
   onClick(): void;
+  width?: number
 }
 
-const Button = ({ children, onClick }: ButtonProps) => {
+const Button = ({ children, onClick, width }: ButtonProps) => {
   return(
-    <StyledButton onClick={onClick}>{children}</StyledButton>
+    <StyledButton onClick={onClick} width={width}>{children}</StyledButton>
   )
 }
 

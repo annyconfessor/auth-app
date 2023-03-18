@@ -16,7 +16,7 @@ export const ProfileItemContainer = styled.div`
 `
 
 export const Group = styled.div` 
-  width: calc(100% - 15%);
+  width: calc(100% - 10%);
   display: flex;
   align-items: center;
   justify-content: space-between;

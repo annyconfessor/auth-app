@@ -7,7 +7,7 @@ import Icon from "../../components/Icon";
 import { ImagesEnum } from '../../components/Image/enum'
 import TextInput from '../../components/Input'
 
-import { Container, Div, Box, Group, Headding, InputsGroup, Subtitle, IconGroup, Span, Link } from "./styles"
+import { Container, Div, Box, Group, Heading, InputsGroup, Subtitle, IconGroup, Span, Link } from "./styles"
 
 const Login = () => {
   const [email, setEmail] = useState("")
@@ -28,7 +28,7 @@ const Login = () => {
     </Div>
     <Group>
         <Box>
-          <Headding>Login</Headding>
+          <Heading>Login</Heading>
         </Box>
         <InputsGroup className="inputs-group"> 
           <TextInput name="EmailInput" type="email" value={email} placeholder="Email" onChange={handleEmail}/>
