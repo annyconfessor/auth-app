@@ -25,7 +25,7 @@ const Profile = () => {
   const Data = [
     {
       key: 'Photo',
-      value: <Icon name="google"/>
+      value: <Image name={ImagesEnum.profile} width={75} borderRadius={10}/>
     },
     {
       key: 'Name',
@@ -33,7 +33,7 @@ const Profile = () => {
     },
     {
       key: 'Bio',
-      value: 'I am a software developer'
+      value: 'I am a software developer and a big fan of devchallenges.'
     },
     {
       key: 'Phone',
@@ -76,7 +76,7 @@ const Profile = () => {
           </Wrapper>
           <Items className='items'>
             {Data.map((item) => 
-              <Wrapper>
+              <Wrapper className='wrapper do infoitem'>
                 <InfoItem item={item.key} subject={item.value} />
               </Wrapper>
             )}

@@ -5,19 +5,27 @@ export const Container = styled.div`
   height: 100px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 `
 
 export const Title = styled.h1`
   font-family: 'Poppins'
-  font-size: 18px;
-  font-weight: 600;
-  color: #333333;
-  padding-bottom: 10px;
+  font-size: 13px;
+  color: #BDBDBD;
+`
+
+export const LeftContent = styled.div`
+  width: 33%;
+`
+
+
+export const RightContent = styled.div`
+  width: 67%;
 `
 
 export const Subtitle = styled.h3`
-  font-size: 14px;
+  font-size: 18px;
+  font-weight: 500;
   font-weight: 400;
-  color: #828282;
+  color: #333333;
 `
