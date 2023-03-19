@@ -1,7 +1,6 @@
 import { Image } from '../components'
 import Button from '../components/Button'
 import { Header } from '../components/Header'
-import Icon from '../components/Icon'
 import { ImagesEnum } from '../components/Image/enum'
 import InfoItem from './components/InfoItem'
 import MenuBar from './components/MenuBar'
@@ -71,7 +70,7 @@ const Profile = () => {
                 <Title>Personal info</Title>
                 <Subtitle>Basic info, like your name and photo</Subtitle>
               </Texts>
-              <Button onClick={handleEdit} width={95}>Editar</Button>
+              <Button onClick={handleEdit} width={95} isTransparent>Editar</Button>
             </Div>
           </Wrapper>
           <Items className='items'>

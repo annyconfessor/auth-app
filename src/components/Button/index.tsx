@@ -5,11 +5,12 @@ type ButtonProps = {
   children: string;
   onClick(): void;
   width?: number
+  isTransparent?: boolean;
 }
 
-const Button = ({ children, onClick, width }: ButtonProps) => {
+const Button = ({ children, onClick, width, isTransparent, }: ButtonProps) => {
   return(
-    <StyledButton onClick={onClick} width={width}>{children}</StyledButton>
+    <StyledButton onClick={onClick} width={width} isTransparent={isTransparent}>{children}</StyledButton>
   )
 }
 
