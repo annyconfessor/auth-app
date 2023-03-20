@@ -1,16 +1,16 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const MenuBarContainer = styled.div` 
   width: 188px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: ${(props) => `${props.theme.colors.white}`};
 `
 
 export const ProfileItemContainer = styled.div` 
   width: 188px;
   display: flex;
-  align-items: center;
   align-items: center;
   justify-content: end;
 `
