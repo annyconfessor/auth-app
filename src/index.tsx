@@ -9,8 +9,6 @@ import './index.css'
 import './assets/fonts/Poppins/Poppins-Black.ttf'
 import { App } from './App'
 import Theme from './theme/theme'
-import { Provider } from 'react-redux'
-import store from './storeConfig/store'
 
 const Container = styled.div`
   display: flex;
@@ -23,7 +21,6 @@ const root = ReactDOM.createRoot(
 );
 
 root.render(
-  // <Provider store={store}>
     <React.StrictMode>
         <ThemeProvider theme={Theme}>
           <Container>
@@ -31,7 +28,6 @@ root.render(
           </Container>
         </ThemeProvider>
     </React.StrictMode>
-  // </Provider>
 );
 
 reportWebVitals();

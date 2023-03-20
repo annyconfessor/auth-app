@@ -6,6 +6,7 @@ import ArrowUp from './ArrowUp.png'
 import ArrowDown from './ArrowDown.png'
 import ProfileUser from './ProfileUser.png'
 import GroupChat from './GroupChat.png'
+import Logout from './Logout.png'
 
 const icons = {
   facebook: {
@@ -37,6 +38,10 @@ const icons = {
   groupChat: {
     name: GroupChat,
     href: "group-chat-page"
+  },
+  logout: {
+    name: Logout,
+    href: "logout-page"
   }
 }
 

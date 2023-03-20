@@ -50,6 +50,10 @@ const Profile = () => {
 
   const handleEdit = () => {}
 
+  const handleMouseOver = (e: any) => {
+    console.log(e.onMouseOver)
+  }
+
   return(
     <Container>
       <Header>
@@ -75,7 +79,7 @@ const Profile = () => {
           </Wrapper>
           <Items className='items'>
             {Data.map((item) => 
-              <Wrapper className='wrapper do infoitem'>
+              <Wrapper>
                 <InfoItem item={item.key} subject={item.value} />
               </Wrapper>
             )}

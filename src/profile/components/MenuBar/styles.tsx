@@ -42,3 +42,28 @@ export const ItemsGroup = styled.div`
   align-items: center;
   margin-top: 20px;
 `
+
+
+export const MenuItem = styled.li`
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 164px;
+  height: 40px;
+  background-color: ${props => props.theme.colors.white};
+  border-radius: 10px;
+  margin: 8px 0;
+  padding-left: 8px;
+
+  &:hover {
+    background-color: ${props => props.theme.colors.gray};
+  }
+
+  span {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #4F4F4F;
+    padding-left: 8px;
+  }
+`   

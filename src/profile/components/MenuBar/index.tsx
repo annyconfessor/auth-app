@@ -3,8 +3,7 @@ import { useState } from 'react'
 import { Image } from '../../../components'
 import Icon from '../../../components/Icon'
 import { ImagesEnum } from '../../../components/Image/enum'
-import MenuItem from '../MenuItem'
-import { MenuBarContainer, ProfileItemContainer, ItemsGroup, Group, Text, StyledButton } from './styles'
+import { MenuBarContainer, ProfileItemContainer, ItemsGroup, Group, Text, StyledButton, MenuItem } from './styles'
 
 const MenuBar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false)
@@ -12,11 +11,15 @@ const MenuBar = () => {
   const data = [
     {
       name: "profileUser",
-      text: "My Profile"
+      text: "My Profile",
     },
     {
       name: "groupChat",
       text: "Group Chat"
+    },
+    {
+      name: "logout",
+      text: "Logout"
     }
   ]
 
@@ -37,7 +40,13 @@ const MenuBar = () => {
     </ProfileItemContainer>
     {isOpen &&
     <ItemsGroup className="items-group">
-      {data.map((item, key) => <MenuItem key={key} name={item.name} text={item.text}/>)}
+      {data.map((item, key) => (
+        <MenuItem key={key}>
+          <Icon name={item.name} width={16} height={16}/>
+          <span />
+          {item.text}
+        </MenuItem>
+      ))}
     </ItemsGroup>
     }
   </MenuBarContainer>
