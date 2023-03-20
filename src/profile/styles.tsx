@@ -17,7 +17,7 @@ export const Body = styled.div`
   margin-top: 45px;
 `
 
-export const TextsContainer = styled.div`
+export const Texts = styled.div`
   width: calc(100% - 30%);
   height: 100px;
   display: flex;
@@ -26,12 +26,14 @@ export const TextsContainer = styled.div`
   align-items: center;
   border: 1px solid #E0E0E0;
   border-radius: 12px 12px 0 0;
-`
 
-export const Heading = styled.h1`
-  font-size: 36px;
-  font-weight: 400;
-  margin-bottom: 8px;
-`
+  h1 {
+    font-size: 36px;
+    font-weight: 400;
+    margin-bottom: 8px;
+  }
 
-export const P = styled.p``
+  p {
+    font-size: 12px;
+  }
+`
