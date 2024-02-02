@@ -8,27 +8,33 @@ const Infos = () => {
 
   const Data = [
     {
-      key: 'Photo',
+      id: 1,
+      name: 'Photo',
       value: <Image name={ImagesEnum.profile} width={75} borderRadius={10}/>
     },
     {
-      key: 'Name',
+      id: 2,
+      name: 'Name',
       value: 'Anny Confessor'
     },
     {
-      key: 'Bio',
+      id: 3,
+      name: 'Bio',
       value: 'I am a software developer and a big fan of devchallenges.'
     },
     {
-      key: 'Phone',
+      id: 4,
+      name: 'Phone',
       value: 908249274292
     },
     {
-      key: 'Email',
+      id: 5,
+      name: 'Email',
       value: 'anny.confessor@gmail.com'
     },
     {
-      key: 'Password',
+      id: 6,
+      name: 'Password',
       value: 123456
     }
   ]
@@ -48,8 +54,8 @@ const Infos = () => {
     </Wrapper>
     <Items className='items'>
       {Data.map((item) => 
-        <Wrapper>
-          <InfoItem item={item.key} subject={item.value} />
+        <Wrapper key={item.id}>
+          <InfoItem item={item.name} subject={item.value} />
         </Wrapper>
       )}
     </Items>

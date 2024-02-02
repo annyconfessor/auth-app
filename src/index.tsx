@@ -9,6 +9,8 @@ import './index.css'
 import './assets/fonts/Poppins/Poppins-Black.ttf'
 import { App } from './App'
 import Theme from './theme/theme'
+// import Login from './authentication/Login'
+// import Register from './authentication/Register'
 
 const Container = styled.div`
   display: flex;
@@ -26,6 +28,8 @@ root.render(
         <ThemeProvider theme={Theme}>
           <Container>
             <App />
+            {/* <Login />
+            <Register /> */}
           </Container>
         </ThemeProvider>
     </React.StrictMode>

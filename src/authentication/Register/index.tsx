@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import icons from "../../assets/Icons";
 import { Image } from '../../components'
 import Button from "../../components/Button";
 import Icon from "../../components/Icon";
@@ -7,6 +6,7 @@ import { ImagesEnum } from '../../components/Image/enum'
 import TextInput from '../../components/Input'
 
 import { Container, Div, Group, Headding, Paragraph, InputsGroup, Subtitle, IconGroup, Span, Link } from "./styles"
+import { IconsEnum } from "../../components/Icon/enum";
 
 const Register = () => {
   const [value, setValue] = useState<string>("")
@@ -42,7 +42,7 @@ const Register = () => {
             <Subtitle>or continue with these social profile</Subtitle>
             <IconGroup>
               <>
-              {Object.keys(icons).map((item) => <Icon name={item} href={item}/>)}
+              {(Object.keys(IconsEnum) as (keyof typeof IconsEnum)[]).map((item) => <Icon name={IconsEnum[item]} href={item}/>)}
               </>
             </IconGroup>
             <Subtitle>Adready a member?<Span><Link href="login-page">Login</Link></Span></Subtitle>

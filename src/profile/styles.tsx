@@ -2,6 +2,8 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
   width: 100%;
+  height: 80%;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -9,12 +11,12 @@ export const Container = styled.div`
 `
 
 export const Body = styled.div`
-  width: 100%;
+  width: 90%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 45px;
+  margin-top: 6rem;
 `
 
 export const Texts = styled.div`

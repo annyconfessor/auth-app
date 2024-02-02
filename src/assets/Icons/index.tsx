@@ -1,46 +1,46 @@
-import Facebook from './Facebook.svg'
-import Github from "./Gihub.svg"
-import Google from './Google.svg'
-import Twitter from './Twitter.svg'
-import ArrowUp from './ArrowUp.png'
-import ArrowDown from './ArrowDown.png'
-import ProfileUser from './ProfileUser.png'
-import GroupChat from './GroupChat.png'
-import Logout from './Logout.png'
+import {default as Facebook} from './Facebook.svg'
+import { default as Github} from "./Gihub.svg"
+import { default as Google } from './Google.svg'
+import { default as Twitter } from './Twitter.svg'
+import { default as ArrowUp } from './ArrowUp.png'
+import { default as ArrowDown } from './ArrowDown.png'
+import { default as ProfileUser } from './ProfileUser.png'
+import { default as GroupChat } from './GroupChat.png'
+import { default as Logout } from './Logout.png'
 
 const icons = {
   facebook: {
-    name: Facebook,
+    value: Facebook,
     href: "https://www.facebook.com"
   },
   github: {
-    name: Github,
+    value: Github,
     href: "https://github.com/"
   },
   google: {
-    name: Google,
+    value: Google,
     href: "https://www.google.com"
   },
   twitter: {
-    name: Twitter,
+    value: Twitter,
     href: "https://www.twitter.com"
   },
   arrowUp: {
-    name: ArrowUp
+    value: ArrowUp
   },
   arrowDown: {
-    name: ArrowDown
+    value: ArrowDown
   },
   profileUser: {
-    name: ProfileUser,
+    value: ProfileUser,
     href: "profile-user-page"
   },
   groupChat: {
-    name: GroupChat,
+    value: GroupChat,
     href: "group-chat-page"
   },
   logout: {
-    name: Logout,
+    value: Logout,
     href: "logout-page"
   }
 }
