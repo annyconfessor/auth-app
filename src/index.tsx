@@ -7,10 +7,9 @@ import styled from 'styled-components'
 import ThemeProvider from './theme'
 import './index.css'
 import './assets/fonts/Poppins/Poppins-Black.ttf'
-import { App } from './App'
 import Theme from './theme/theme'
-// import Login from './authentication/Login'
-// import Register from './authentication/Register'
+import { GlobalStyles } from './GlobalStyles'
+import AppRouter from './router/AppRouter'
 
 const Container = styled.div`
   display: flex;
@@ -25,11 +24,10 @@ const root = ReactDOM.createRoot(
 
 root.render(
     <React.StrictMode>
+      <GlobalStyles />
         <ThemeProvider theme={Theme}>
           <Container>
-            <App />
-            {/* <Login />
-            <Register /> */}
+            <AppRouter/>
           </Container>
         </ThemeProvider>
     </React.StrictMode>
