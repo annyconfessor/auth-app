@@ -1,53 +1,56 @@
-import React, { useState } from "react";
-
-import { Image } from '../../components'
-import Button from "../../components/Button";
-import Icon from "../../components/Icon";
-import { ImagesEnum } from '../../components/Image/enum'
-import { IconsEnum } from "../../components/Icon/enum";
-import TextInput from '../../components/Input'
-
-import { Container, Div, Box, Group, Heading, InputsGroup, Subtitle, IconGroup, Span, Link } from "./styles"
+import React, { useState } from "react"
+import Button from "../../components/Button"
+import TextInput from "../../components/Input"
+import { BoxComponent as Box } from "../../components/Box"
+import ContainerLayout from "../../components/Layout"
+import TextComponent from "../../components/Text"
 
 const Login = () => {
-  const [email, setEmail] = useState("")
-  const [password, setPassword] = useState("")
+  const [formData, setFormData] = useState({ email: "", password: "" })
 
-  const handleEmail = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    setEmail(e.target.value)
-  }
-  
-  const handlePassword = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    setPassword(e.target.value)
-  }
+  return (
+    <ContainerLayout>
+      <Box display="flex" justifyContent="center" alignItems="center" backgroundColor="#F0F0F7" width="50%" height="100%">
+        <Box display="flex" justifyContent="space-evenly" width="80%" flexDirection="column" style={{ gap: "2rem" }}>
+          <TextComponent variant="title">Fazer login</TextComponent>
 
-  return(
-    <Container>
-    <Div>
-      <Image name={ImagesEnum.logo} />
-    </Div>
-    <Group>
-        <Box>
-          <Heading>Login</Heading>
-        </Box>
-        <InputsGroup className="inputs-group"> 
-          <TextInput name="EmailInput" type="email" value={email} placeholder="Email" onChange={handleEmail}/>
-          <TextInput name="PasswordInput" type="password" value={password} placeholder="Password" onChange={handlePassword}/>
+          <Box display="flex" flexDirection="column" width="50%" margin="auto" style={{ gap: "2rem" }}>
+            <TextInput 
+              name="EmailInput" 
+              type="email" 
+              value={formData.email} 
+              placeholder="Email" 
+              onChange={(e) => setFormData({ ...formData, email: e.target.value })} 
+            />
+            <TextInput 
+              name="PasswordInput" 
+              type="password" 
+              value={formData.password} 
+              placeholder="Password" 
+              onChange={(e) => setFormData({ ...formData, password: e.target.value })} 
+            />
+          </Box>
+
+          <Box display="flex" alignItems="center" justifyContent="space-evenly" width="100%">
+            <Box display="flex" alignItems="center">
+              <input type="checkbox" id="remember-password" />
+              <label htmlFor="remember-password">
+                <TextComponent variant="paragraph">Lembrar-me</TextComponent>
+              </label>
+            </Box>
+            <TextComponent variant="paragraph">Esqueci minha senha</TextComponent>
+          </Box>
+
           <Button onClick={() => {}}>Login</Button>
-        </InputsGroup>
-        <Subtitle>or continue with these social profile</Subtitle>
-        <IconGroup>
-          <>
-          {(Object.keys(IconsEnum) as (keyof typeof IconsEnum)[]).map((key, value) => {
-            return(
-              <Icon name={IconsEnum[key]} href={key}/>
-            )
-          })}
-          </>
-        </IconGroup>
-        <Subtitle>Don’t have an account yet?<Span><Link href="register-page">Register</Link></Span></Subtitle>
-    </Group>
-  </Container>
+
+          {/* Footer */}
+          <Box display="flex" justifyContent="space-between">
+            <TextComponent variant="body">Não tem conta? Cadastre-se</TextComponent>
+            <TextComponent variant="paragraph">É de graça 💛</TextComponent>
+          </Box>
+        </Box>
+      </Box>
+    </ContainerLayout>
   )
 }
 
