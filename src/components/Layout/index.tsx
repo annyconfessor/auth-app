@@ -10,7 +10,7 @@ const ContainerLayout = ({ children }: ContainerLayoutProps) => {
       <BoxComponent display="flex" 
       justifyContent="end" 
       alignItems="center" 
-      backgroundColor='#8E79EC'
+      backgroundColor='#165185'
       height="100vh" 
       width="100vw">
         {children}

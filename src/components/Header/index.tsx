@@ -6,7 +6,7 @@ import { Container } from "./styles"
 export const Header = () => {
   return(
     <Container>
-      <Image name={ImagesEnum.logo} width={170} height={25} />
+      <Image name={ImagesEnum.profile} width={170} height={25} />
       <MenuBar />
     </Container>
   )

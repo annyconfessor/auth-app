@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { variant } from "styled-system"
+import { variant, space, color, layout } from "styled-system"
 
 type TextProps = {
   variant: 'title' | 'heading' | 'subheading' | 'body' | 'paragraph'
@@ -20,13 +20,18 @@ ${variant({
       fontSize: 21
     },
     body: {
-      fontSize: 16
+      fontSize: 16,
+      color: '#9C98A6'
     },
     paragraph: {
-      fontSize: 14
+      fontSize: 14,
+      color: '#9C98A6'
     }
   }
 })}
+${space}
+${color}
+${layout}
 `
 
 export default TextComponent

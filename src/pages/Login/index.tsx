@@ -11,18 +11,20 @@ const Login = () => {
   return (
     <ContainerLayout>
       <Box display="flex" justifyContent="center" alignItems="center" backgroundColor="#F0F0F7" width="50%" height="100%">
-        <Box display="flex" justifyContent="space-evenly" width="80%" flexDirection="column" style={{ gap: "2rem" }}>
+        <Box width="50%" display="flex" flexDirection="column" style={{ gap: "2rem" }}>
           <TextComponent variant="title">Fazer login</TextComponent>
 
-          <Box display="flex" flexDirection="column" width="50%" margin="auto" style={{ gap: "2rem" }}>
+          <Box display="flex" flexDirection="column">
             <TextInput 
+              isRadiusTop
               name="EmailInput" 
               type="email" 
               value={formData.email} 
               placeholder="Email" 
               onChange={(e) => setFormData({ ...formData, email: e.target.value })} 
             />
-            <TextInput 
+            <TextInput  
+              isRadiusBottom
               name="PasswordInput" 
               type="password" 
               value={formData.password} 
@@ -31,7 +33,7 @@ const Login = () => {
             />
           </Box>
 
-          <Box display="flex" alignItems="center" justifyContent="space-evenly" width="100%">
+          <Box display="flex" alignItems="center" justifyContent="space-evenly">
             <Box display="flex" alignItems="center">
               <input type="checkbox" id="remember-password" />
               <label htmlFor="remember-password">
@@ -41,11 +43,11 @@ const Login = () => {
             <TextComponent variant="paragraph">Esqueci minha senha</TextComponent>
           </Box>
 
-          <Button onClick={() => {}}>Login</Button>
+          <Button variant="solid" onClick={() => {}}>Login</Button>
 
           {/* Footer */}
           <Box display="flex" justifyContent="space-between">
-            <TextComponent variant="body">Não tem conta? Cadastre-se</TextComponent>
+            <TextComponent variant="body">Não faz parte da comunidade?</TextComponent>
             <TextComponent variant="paragraph">É de graça 💛</TextComponent>
           </Box>
         </Box>

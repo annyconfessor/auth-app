@@ -1,19 +1,21 @@
-import React from 'react';
-import { StyledInput } from './styles';
+import React from 'react'
+import { StyledInput } from './styles'
 
 type InputProps = {
-  type: string;
-  name: string;
-  value?: string;
-  placeholder: string;
+  type?: string
+  name?: string
+  value?: string
+  placeholder?: string,
+  isRadiusTop?: boolean,
+  isRadiusBottom?: boolean,
   onChange: (e: any) => void
 }
 
-const TextInput = ({ type, name, value, placeholder, onChange }: InputProps) => {
+const TextInput = ({ isRadiusBottom, isRadiusTop, type, name, value, placeholder, onChange }: InputProps) => {
 
   return(
-    <StyledInput type={type} name={name} placeholder={placeholder} value={value} onChange={onChange}/>
+      <StyledInput isRadiusBottom={isRadiusBottom} isRadiusTop={isRadiusTop}/>
   )
-};
+}
 
 export default TextInput

@@ -49,7 +49,7 @@ const Infos = () => {
           <Title>Personal info</Title>
           <Subtitle>Basic info, like your name and photo</Subtitle>
         </Texts>
-        <Button onClick={handleEdit} width={95} isTransparent>Editar</Button>
+        <Button onClick={handleEdit}>Editar</Button>
       </Div>
     </Wrapper>
     <Items className='items'>
