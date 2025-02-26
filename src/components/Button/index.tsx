@@ -1,16 +1,16 @@
 import React from "react"
 import { StyledButton } from "./styled"
+import { VariantsEnum } from "./enum"
 
 type ButtonProps = {
-  children: string;
-  onClick(): void;
-  width?: number
-  isTransparent?: boolean;
+  children: React.ReactNode
+  onClick(): void
+  variant?: keyof typeof VariantsEnum
 }
 
-const Button = ({ children, onClick, width, isTransparent, }: ButtonProps) => {
+const Button = ({ children, onClick, variant = 'solid' }: ButtonProps) => {
   return(
-    <StyledButton onClick={onClick} width={width} isTransparent={isTransparent}>{children}</StyledButton>
+    <StyledButton onClick={onClick} variant={VariantsEnum[variant]}>{children}</StyledButton>
   )
 }
 
