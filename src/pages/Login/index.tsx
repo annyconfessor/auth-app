@@ -4,6 +4,8 @@ import TextInput from "../../components/Input"
 import { BoxComponent as Box } from "../../components/Box"
 import ContainerLayout from "../../components/Layout"
 import TextComponent from "../../components/Text"
+import { GoogleLogin } from "@react-oauth/google"
+import { jwtDecode } from "jwt-decode"
 
 const Login = () => {
   const [formData, setFormData] = useState({ email: "", password: "" })
@@ -44,6 +46,19 @@ const Login = () => {
           </Box>
 
           <Button variant="solid" onClick={() => {}}>Login</Button>
+
+          <GoogleLogin
+            onSuccess={(credentialResponse) => {
+              if (credentialResponse.credential) {
+                console.log(jwtDecode(credentialResponse.credential))
+              } else {
+                console.error('Credential is undefined')
+              }
+            }}
+            onError={() => {
+              console.log('Login Failed');
+            }}
+          />
 
           {/* Footer */}
           <Box display="flex" justifyContent="space-between">
