@@ -3,6 +3,7 @@ import { VariantsEnum } from './enum'
 
 type StyledButtonProps = {
   variant: VariantsEnum
+  width?: number
 }
 
 const VariantStyles = {
@@ -36,7 +37,7 @@ const VariantStyles = {
       border: 2px solid #00DBA2;
 
       &:hover {
-        background-color: #00DBA214; /* Um leve tom transparente */
+        background-color: #00DBA214;
       }
     `,
     [VariantsEnum.ghost]: css`
@@ -45,16 +46,17 @@ const VariantStyles = {
       border: none;
 
       &:hover {
-        color: #009E78; /* Tom mais escuro */
+        color: #009E78;
         background-color: rgba(0, 219, 162, 0.1);
       }
     `
-    }
+}
     
-    export const StyledButton = styled.button<StyledButtonProps>`
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 16px;
-    ${({ variant }) =>VariantStyles[variant]}
+export const StyledButton = styled.button<StyledButtonProps>`
+padding: 10px;
+cursor: pointer;
+border-radius: 5px;
+font-size: 16px;
+${({ variant }) => VariantStyles[variant]}
+${({ width }) => width && `width: ${width}px`}
 `
